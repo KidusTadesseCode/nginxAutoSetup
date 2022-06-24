@@ -1,4 +1,5 @@
 CURRENT=$(ls -td -- * | head -n 1)
+$CURRENT=CURRENT%.*
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
