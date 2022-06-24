@@ -1,0 +1,119 @@
+# Installing git 
+sudo yum update -y
+sudo yum install git -y
+git version
+
+# Installing NodeJs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts
+node -e "console.log('Running Node.js ' + process.version)"
+
+# Connecting gitHub to your es2 instance
+clear
+cd ~/.ssh
+echo 'What is the username for your github accout'
+read USERNAME
+IDFIleNAME=$USERNAME"_id_rsa"
+ssh-keygen -f ./$IDFIleNAME -t rsa -N ""
+echo 'Copy and past this public key to your github account.'
+echo '\n'
+cat ~/.ssh/$IDFIleNAME'.pub'
+echo \#$USERNAME '
+Host github.com
+\tHostName github.com
+\tIdentityFile ~/.ssh/'$IDFIleNAME'
+'>>config
+chmod 400 ~/.ssh/$IDFIleNAME
+echo '\n Press Enter key to exit'
+read ANYKEY
+
+
+
+
+
+
+
+
+
+
+
+npx serve -s build
+serve -s build
+
+sudo yum install nginx
+sudo nginx -v
+
+
+sudo yum install wget
+wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.4_amd64.deb
+
+cat /etc/os-release
+
+sudo vi /etc/yum.repos.d/nginx.repo
+
+# test this frist echo "[nginx] \n name=nginx repo \n baseurl=https://nginx.org/packages/mainline/centos/7/$basearch/ \n gpgcheck=0 \n enabled=1" > /etc/yum.repos.d/nginx.repo
+
+
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/mainline/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+
+sudo yum update
+sudo service nginx start
+curl localhost:80
+
+#nginx index file is @ usr/share/nginx/html/index.html
+
+
+
+sudo rm -rf ~/../../usr/share/nginx/html/*
+sudo rm ~/../../usr/share/nginx/html/*
+
+
+
+#404.html  50x.html  icons  index.html  nginx-logo.png  poweredby.png
+
+
+
+
+sudo mkdir ~/../../usr/share/nginx/html/builderfontend.com
+sudo chown -R $USER:$USER ~/../../usr/share/nginx/html/builderfontend.com
+sudo cp -r ~/builderFront/build/*  ~/../../usr/share/nginx/html/builderfontend.com
+
+sudo vi ~/../../etc/nginx/nginx.conf
+#change below
+#FROM THIS 
+root         /usr/share/nginx/html; 
+#TO THIS
+root         /usr/share/nginx/html/builderfontend.com;
+?
+#ADD THIS
+location = / {
+    try_files $url /index.html
+        }
+?
+
+
+#Restart the system
+sudo service nginx restart
+
+
+??
+
+cd ~/../../usr/share/nginx/html/builderfontend.com
+sudo npm i -g pm2
+pm2 start server.js --name "server"
+reverse proxy 28:10
+curl localhost:4000  RESPONCE for Apollo > GET query missing
+sudo vi ~/../../etc/nginx/nginx.conf
+location = graphQL {
+    proxy_pass http://localhost: 4000/:
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade Shttp_upgrade;
+    proxy_set_header Connection "upgrade" ;
+    }
+sudo service nginx restart
+??
