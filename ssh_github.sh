@@ -4,9 +4,18 @@ read USERNAME
 echo "Passphrase for the key? This is optional and to skip press enter 
 If you provide passphrase, please make sure you remember it."
 read PASSPHRASE
- 
+
+if  
+
 IDFIleNAME=$USERNAME"_id_rsa"
-ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N $PASSPHRASE;
+
+if [ -z "$PASSPHRASE" ]
+then
+    ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa
+else
+    ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
+fi
+
 sudo chmod 400 ~/.ssh/$IDFIleNAME
 echo \#$USERNAME "
 Host $USERNAME
