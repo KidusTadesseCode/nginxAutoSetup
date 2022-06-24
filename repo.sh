@@ -23,3 +23,5 @@ DIRNAME==$(pwd)
 
 export FOLDERNAME
 export DIRNAME
+
+exit;
