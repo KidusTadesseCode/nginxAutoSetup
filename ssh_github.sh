@@ -12,16 +12,11 @@ echo "
 #$USERNAME
 Host $USERNAME
     HostName github.com
-    IdentityFile ~/.ssh/'$IDFIleNAME'
+    IdentityFile ~/.ssh/$IDFIleNAME
 ">> ~/.ssh/config
 
-cat config
+cat ~/.ssh/config
 
-echo "\n"
-ll
-echo "\n"
-pwd
-echo "\n"
 
 
 echo "copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
