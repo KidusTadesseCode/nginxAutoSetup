@@ -9,6 +9,9 @@ IDFIleNAME=$USERNAME"_id_rsa"
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 sudo chmod 400 ~/.ssh/$IDFIleNAME
 
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/$IDFIleNAME
+
 echo "
 #$USERNAME
 Host $USERNAME
