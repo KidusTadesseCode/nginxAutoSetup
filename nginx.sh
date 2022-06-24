@@ -17,11 +17,11 @@ export DIRNAME
 export SITE
 
 echo "is this a React or Node Backend App?"
-select APPTYPE in "React" "Node Backend App"; do
+select APPTYPE in "React" "Node-Backend-App"; do
     case $APPTYPE in
         React ) sh reactbuild.sh; break;;
-        Node Backend App ) sudo cp -r ~/DIRNAME/*  ~/../../usr/share/nginx/html/$SITE; break;;
-        *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
+        Node-Backend-App ) sudo cp -r ~/DIRNAME/*  ~/../../usr/share/nginx/html/$SITE; break;;
+        *) echo "Invalid entry. Please type 1 for React or type 2 for Node-Backend-App followed my Enter."
     esac
 done
 
