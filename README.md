@@ -4,7 +4,7 @@ run the following commands
 
 <code>
 cd nginxAutoSetup
-<br/>
+</code>
+<code>
 sh index.sh
-
 </code>
