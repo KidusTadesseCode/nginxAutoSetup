@@ -5,19 +5,25 @@ echo "Passphrase for the key? This is optional and to skip press enter
 If you provide passphrase, please make sure you remember it."
 read PASSPHRASE
 IDFIleNAME=$USERNAME"_id_rsa"
-if [ -z "$PASSPHRASE" ]
-then
-    ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa
-else
-    ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
-fi
-
+ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 sudo chmod 400 ~/.ssh/$IDFIleNAME
-echo \#$USERNAME "
+
+echo "
+#$USERNAME
 Host $USERNAME
 \t HostName github.com
 \t IdentityFile ~/.ssh/'$IDFIleNAME'
 ">>config
+
+cat config
+
+echo "\n"
+ll
+echo "\n"
+pwd
+echo "\n"
+
+
 echo "copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
 echo "\n"
 cat ~/.ssh/$IDFIleNAME'.pub'
