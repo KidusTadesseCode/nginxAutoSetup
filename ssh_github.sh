@@ -20,8 +20,10 @@ cat ~/.ssh/config
 
 
 echo "copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
-echo "\n"
+echo "
+"
 cat ~/.ssh/$IDFIleNAME'.pub'
-echo "\n"
+echo "
+"
 echo press any key to \continue 
 read ANYKEY
