@@ -11,8 +11,8 @@ sudo chmod 400 ~/.ssh/$IDFIleNAME
 echo "
 #$USERNAME
 Host $USERNAME
-\t HostName github.com
-\t IdentityFile ~/.ssh/'$IDFIleNAME'
+    HostName github.com
+    IdentityFile ~/.ssh/'$IDFIleNAME'
 ">> ~/.ssh/config
 
 cat config
