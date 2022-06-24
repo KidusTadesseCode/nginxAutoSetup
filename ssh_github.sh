@@ -13,7 +13,7 @@ echo "
 Host $USERNAME
 \t HostName github.com
 \t IdentityFile ~/.ssh/'$IDFIleNAME'
-">>config
+">> ~/.ssh/config
 
 cat config
 
