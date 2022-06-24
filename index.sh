@@ -1,7 +1,7 @@
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
-        Yes ) sh git.sh; break;;
+        Yes )sh git.sh; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
