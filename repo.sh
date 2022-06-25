@@ -14,7 +14,8 @@
 
 mkdir ~/repo
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/$IDFIleNAME
+# ssh-add ~/.ssh/$IDFIleNAME
+ssh-add ~/.ssh/try_id_rsa
 git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
 
 eval "$(pwd)"
