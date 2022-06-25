@@ -11,12 +11,23 @@
 # eval "$(ssh-agent -s)"
 # cd 
 # git clone REPOLINK
-sudo git clone git@github.com:KidusTadesseCode/navigation.git
-ls 
+mkdir ~/repo
+
+git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
+
+eval "$(pwd)"
+
+eval "$(ls ~/)"
+
+echo "press enter key to continue "
+read ANYKEY
+
+
 # FILEPROJECT=$(ls -td -- * | head -n 1)
 
 #cd FILEPROJECT/
-pwd
+# pwd
+eval "$(pwd)"
 # cd ~/navigation
 # npm i
 
