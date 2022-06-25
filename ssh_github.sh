@@ -30,6 +30,8 @@ read ANYKEY
 ssh-add ~/.ssh/$IDFIleNAME
 ssh -T git@github.com
 
+echo "${IDFIleNAME}"
+
 cat ~/.ssh/config
 echo "press enter key to continue "
 read ANYKEY
