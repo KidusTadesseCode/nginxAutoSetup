@@ -28,6 +28,7 @@ read ANYKEY
 #cd FILEPROJECT/
 # pwd
 eval "$(pwd)"
+ssh-add ~/.ssh/$IDFIleNAME
 # cd ~/navigation
 # npm i
 

@@ -32,3 +32,5 @@ ssh git@github.com
 cat ~/.ssh/config
 echo "press enter key to continue "
 read ANYKEY
+
+export $IDFIleNAME
