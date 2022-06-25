@@ -9,7 +9,7 @@
 
 
 
-cd ~/
+cd ~
 # git clone REPOLINK
 git clone git@github.com:KidusTadesseCode/navigation.git
 ls 
