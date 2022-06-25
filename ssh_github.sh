@@ -22,7 +22,8 @@ read ANYKEY
 
 chmod go-w ~/.ssh/config
 eval `sudo ssh-agent -s`
-ssh-add ~/.ssh/$IDFIleNAME
+eval `ssh-add \~/.ssh/$IDFIleNAME`
+# ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
 
 ssh git@github.com -y
