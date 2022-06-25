@@ -15,7 +15,7 @@
 mkdir ~/repo
 eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/$IDFIleNAME
-echo "$IDFIleNAME"
+echo "from repo -- $IDFIleNAME"
 
 
 ssh-add ~/.ssh/try_id_rsa
