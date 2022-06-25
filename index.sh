@@ -17,6 +17,7 @@ select NODEJS in "Yes" "No"; do
     esac
 done
 IDFIleNAME="nothing"
+export IDFIleNAME
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
