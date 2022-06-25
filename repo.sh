@@ -12,7 +12,8 @@
 # cd 
 # git clone REPOLINK
 mkdir ~/repo
-
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/$IDFIleNAME
 git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
 
 eval "$(pwd)"
@@ -27,8 +28,6 @@ read ANYKEY
 
 #cd FILEPROJECT/
 # pwd
-eval "$(pwd)"
-ssh-add ~/.ssh/$IDFIleNAME
 # cd ~/navigation
 # npm i
 

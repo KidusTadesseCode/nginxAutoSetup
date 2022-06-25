@@ -27,7 +27,7 @@ pwd
 echo "press enter key to continue "
 read ANYKEY
 ssh-add ~/.ssh/$IDFIleNAME
-ssh git@github.com
+ssh -T git@github.com
 
 cat ~/.ssh/config
 echo "press enter key to continue "
