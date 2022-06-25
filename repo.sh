@@ -13,15 +13,15 @@ eval "$(ssh-agent -s)"
 # git clone REPOLINK
 sudo git clone git@github.com:KidusTadesseCode/navigation.git
 ls 
-FILEPROJECT=$(ls -td -- * | head -n 1)
+# FILEPROJECT=$(ls -td -- * | head -n 1)
 
 #cd FILEPROJECT/
 pwd
-cd ~/navigation
+# cd ~/navigation
 # npm i
 
-FOLDERNAME=${PWD##*/}
-DIRNAME==$(pwd)
+# FOLDERNAME=${PWD##*/}
+# DIRNAME==$(pwd)
 
-export FOLDERNAME
-export DIRNAME
+# export FOLDERNAME
+# export DIRNAME
