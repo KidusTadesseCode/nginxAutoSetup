@@ -21,10 +21,17 @@ echo "press enter key to continue "
 read ANYKEY
 
 #chmod go-w ~/.ssh/config
-sudo -s -H
-eval `sudo ssh-agent -s`
+# sudo -s -H
+eval "$(ssh-agent -s -H)"
 pwd
+
+echo "press enter key to continue "
+read ANYKEY
+
 ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
 
-ssh git@github.com -y
+echo "press enter key to continue "
+read ANYKEY
+
+ssh git@github.com
