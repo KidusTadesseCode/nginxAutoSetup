@@ -34,5 +34,6 @@ sudo cat ~/.ssh/config
 echo "${IDFIleNAME}"
 echo "press enter key to continue "
 read ANYKEY
-export ${IDFIleNAME}
+export IDFIleNAME
+# ./index.sh
 
