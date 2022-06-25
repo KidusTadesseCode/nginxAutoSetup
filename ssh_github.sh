@@ -8,17 +8,10 @@ read PASSPHRASE
 IDFIleNAME=$USERNAME"_id_rsa"
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 sudo chmod 400 ~/.ssh/$IDFIleNAME
+echo '#$USERNAME \n\tHost'$USERNAME'\n\tHostName github.com \n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/$IDFIleNAME
-
-echo "
-#$USERNAME
-Host $USERNAME
-    HostName github.com
-    IdentityFile ~/.ssh/$IDFIleNAME
-">> ~/.ssh/config
-
 cat ~/.ssh/config
 
 
