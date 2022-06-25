@@ -1,5 +1,4 @@
 #!/bin/sh
-echo "${IDFIleNAME}"
 echo 'What would you like this ssl keys to be called? You can use your username or anything.'
 read USERNAME
 
@@ -35,4 +34,5 @@ sudo cat ~/.ssh/config
 echo "${IDFIleNAME}"
 echo "press enter key to continue "
 read ANYKEY
+export $IDFIleNAME
 

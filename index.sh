@@ -25,7 +25,7 @@ select SSLGITHUB in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
-eval `grep "^export " ssh_github.sh`
+eval "$(grep export ssh_github.sh)"
 echo "from index 1 -- $IDFIleNAME"
 echo "from index 2 -- ${IDFIleNAME}"
 
