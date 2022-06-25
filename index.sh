@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in

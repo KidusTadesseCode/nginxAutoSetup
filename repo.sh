@@ -1,3 +1,4 @@
+#!/bin/sh
 # echo "Whats the repo ssl link?"
 # read REPOLINK
 

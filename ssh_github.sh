@@ -1,3 +1,4 @@
+#!/bin/sh
 echo 'What would you like this ssl keys to be called? You can use your username or anything.'
 read USERNAME
 
