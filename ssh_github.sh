@@ -6,7 +6,7 @@ echo "Passphrase for the key? This is optional and to skip press enter
 If you provide passphrase, please make sure you remember it."
 read PASSPHRASE
 
-IDFIleNAME=$USERNAME"_id_rsa"
+export IDFIleNAME=$USERNAME"_id_rsa"
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
@@ -30,10 +30,8 @@ read ANYKEY
 ssh-add ~/.ssh/$IDFIleNAME
 ssh -T git@github.com
 
-echo "${IDFIleNAME}"
-
 cat ~/.ssh/config
+echo "${IDFIleNAME}"
 echo "press enter key to continue "
 read ANYKEY
-export IDFIleNAME
 
