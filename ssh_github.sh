@@ -7,10 +7,11 @@ read PASSPHRASE
 
 IDFIleNAME=$USERNAME"_id_rsa"
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
-#sudo chmod 400 ~/.ssh/$IDFIleNAME
+
+sudo chmod 400 ~/.ssh/$IDFIleNAME
 echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
-sudo chmod go-w ~/.ssh/config
+chmod go-w ~/.ssh/config
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
@@ -24,4 +25,4 @@ echo "
 echo press any key to \continue 
 read ANYKEY
 
-sudo ssh git@github.com -y
+ssh git@github.com -y
