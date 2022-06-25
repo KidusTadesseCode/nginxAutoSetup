@@ -1,5 +1,4 @@
 #!/bin/sh
-export IDFIleNAME
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
@@ -26,7 +25,8 @@ select SSLGITHUB in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
-echo "from index 1 -- ${IDFIleNAME}"
+eval `grep "^export " ssh_github.sh`
+echo "from index 1 -- $IDFIleNAME"
 echo "from index 2 -- ${IDFIleNAME}"
 
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"

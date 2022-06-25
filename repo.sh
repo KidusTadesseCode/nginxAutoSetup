@@ -13,6 +13,8 @@
 # cd 
 # git clone REPOLINK
 
+eval `grep "^export " ../ssh_github.sh`
+
 mkdir ~/repo
 eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/$IDFIleNAME
