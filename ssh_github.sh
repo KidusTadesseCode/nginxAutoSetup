@@ -6,7 +6,7 @@ If you provide passphrase, please make sure you remember it."
 read PASSPHRASE
 
 IDFIleNAME=$USERNAME"_id_rsa"
-sudo ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
+ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 #sudo chmod 400 ~/.ssh/$IDFIleNAME
 echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
