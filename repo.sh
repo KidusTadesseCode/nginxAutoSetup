@@ -16,6 +16,7 @@ ls
 FILEPROJECT=$(ls -td -- * | head -n 1)
 
 #cd FILEPROJECT/
+pwd
 cd ~/navigation
 npm i
 
