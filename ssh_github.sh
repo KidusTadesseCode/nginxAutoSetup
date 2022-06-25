@@ -21,6 +21,7 @@ echo "press enter key to continue "
 read ANYKEY
 
 chmod go-w ~/.ssh/config
+sudo ssh-agent
 eval "$(ssh-agent -s)"
 sudo ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
