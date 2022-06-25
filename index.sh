@@ -21,10 +21,7 @@ done
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
-        Yes ) 
-        export IDFIleNAME="nothing"
-        sh ssh_github.sh;
-        break;;
+        Yes ) sh ssh_github.sh; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac

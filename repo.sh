@@ -21,7 +21,7 @@ eval "$(ssh-agent -s)"
 echo "from repo -- ${IDFIleNAME}"
 
 
-ssh-add ~/.ssh/try_id_rsa
+# ssh-add ~/.ssh/try_id_rsa
 git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
 
 eval "$(pwd)"
