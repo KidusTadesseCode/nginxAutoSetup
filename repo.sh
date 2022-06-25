@@ -8,7 +8,7 @@
 # done
 
 
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)"
 # cd 
 # git clone REPOLINK
 sudo git clone git@github.com:KidusTadesseCode/navigation.git

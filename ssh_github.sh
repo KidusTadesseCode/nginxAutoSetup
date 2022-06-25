@@ -7,31 +7,26 @@ read PASSPHRASE
 
 IDFIleNAME=$USERNAME"_id_rsa"
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
+echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
 sudo chmod 400 ~/.ssh/$IDFIleNAME
-# echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
-
-
+chmod go-w ~/.ssh/config
 
 echo "Copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
 echo -e '\n'
+
 cat ~/.ssh/$IDFIleNAME'.pub'
 echo -e '\n'
 echo "press enter key to continue "
 read ANYKEY
 
-#chmod go-w ~/.ssh/config
-# sudo -s -H
-eval "$(ssh-agent -s -H)"
+eval "$(ssh-agent -s)"
 pwd
-
 echo "press enter key to continue "
 read ANYKEY
-
 ssh-add ~/.ssh/$IDFIleNAME
-cat ~/.ssh/config
 
+cat ~/.ssh/config
 echo "press enter key to continue "
 read ANYKEY
-
 ssh git@github.com
