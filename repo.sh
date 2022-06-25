@@ -9,9 +9,9 @@
 
 
 
-cd 
+# cd 
 # git clone REPOLINK
-git clone git@github.com:KidusTadesseCode/navigation.git
+git clone git@github.com:KidusTadesseCode/navigation.git ~/
 ls 
 FILEPROJECT=$(ls -td -- * | head -n 1)
 
