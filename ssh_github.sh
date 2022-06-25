@@ -21,6 +21,7 @@ echo "press enter key to continue "
 read ANYKEY
 
 #chmod go-w ~/.ssh/config
+sudo -s -H
 eval `sudo ssh-agent -s`
 pwd
 ssh-add ~/.ssh/$IDFIleNAME
