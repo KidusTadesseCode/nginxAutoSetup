@@ -8,7 +8,7 @@
 # done
 
 
-
+eval "$(ssh-agent -s)"
 # cd 
 # git clone REPOLINK
 sudo git clone git@github.com:KidusTadesseCode/navigation.git
@@ -18,7 +18,7 @@ FILEPROJECT=$(ls -td -- * | head -n 1)
 #cd FILEPROJECT/
 pwd
 cd ~/navigation
-npm i
+# npm i
 
 FOLDERNAME=${PWD##*/}
 DIRNAME==$(pwd)
