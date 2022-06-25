@@ -10,7 +10,7 @@ ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 #sudo chmod 400 ~/.ssh/$IDFIleNAME
 echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
-chmod go-w ~/.ssh/$IDFIleNAME
+chmod go-w ~/.ssh/config
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
