@@ -24,4 +24,4 @@ echo "
 echo press any key to \continue 
 read ANYKEY
 
-ssh git@github.com -y
+sudo ssh git@github.com -y
