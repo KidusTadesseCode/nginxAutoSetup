@@ -12,7 +12,7 @@ echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~
 
 sudo chmod go-w ~/.ssh/config
 eval "$(ssh-agent -s)"
-sudo ssh-add ~/.ssh/$IDFIleNAME
+ssh-add ~/.ssh/$IDFIleNAME
 cat ~/.ssh/config
 
 echo "copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
