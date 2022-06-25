@@ -35,5 +35,5 @@ echo "${IDFIleNAME}"
 cat ~/.ssh/config
 echo "press enter key to continue "
 read ANYKEY
-export ${IDFIleNAME}
+export IDFIleNAME
 
