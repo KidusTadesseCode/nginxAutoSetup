@@ -24,7 +24,7 @@ select SSLGITHUB in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
-
+export IDFIleNAME
 
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"
 select REPO in "Yes" "No"; do
