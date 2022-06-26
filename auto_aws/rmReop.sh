@@ -1,0 +1,1 @@
+rm -rf nginxAutoSetup-main.zip nginxAutoSetup-main

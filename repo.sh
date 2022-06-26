@@ -1,5 +1,5 @@
 #!/bin/sh
-function gitRepo(){
+function git_Repo(){
 while [ -z $REPOLINK ]
 do
     echo "Whats the repo ssl link?"
@@ -13,21 +13,21 @@ done
 
 # eval `grep "^export " ../ssh_github.sh`
 
-mkdir ~/repo
+# mkdir ~/repo
 # eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/$IDFIleNAME
-echo "from repo -- ${IDFIleNAME}"
-git clone $REPOLINK ~/repo
+# echo "from repo -- ${IDFIleNAME}"
+git clone $REPOLINK ~/
 
 # ssh-add ~/.ssh/try_id_rsa
 # git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
 
-eval "$(pwd)"
+# eval "$(pwd)"
 
-eval "$(ls ~/)"
+# eval "$(ls ~/)"
 
-echo "press enter key to continue "
-read ANYKEY
+# echo "press enter key to continue "
+# read ANYKEY
 
 
 # FILEPROJECT=$(ls -td -- * | head -n 1)
@@ -37,9 +37,11 @@ read ANYKEY
 # cd ~/navigation
 # npm i
 
-FOLDERNAME=${PWD##*/}
-DIRNAME==$(pwd)
-return $FOLDERNAME $DIRNAME
+# FOLDERNAME=${PWD##*/}
+# DIRNAME==$(pwd)
+echo $REPOLINK
+return
 # export FOLDERNAME
 # export DIRNAME
 }
+REPO_LINK=$(git_Repo)

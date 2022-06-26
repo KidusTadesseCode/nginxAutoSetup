@@ -35,5 +35,5 @@ function ssh_git(){
     echo "${IDFIleNAME}"
     echo "press enter key to continue "
     read ANYKEY
-    return $IDFIleNAME
+    return
 }

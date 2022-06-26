@@ -1,11 +1,14 @@
 #!/bin/sh
 # chmod +x index.sh
-chmod +x git.sh
+# chmod +x git.sh
 # chmod +x node.sh
-chmod +x ssh_github.sh
+# chmod +x ssh_github.sh
 source ./ssh_github.sh
 source ./repo.sh
 source ./nginx.sh
+
+#temp Delete this line and the file
+sh test.sh
 
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
@@ -34,6 +37,8 @@ select SSLGITHUB in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
+
+# Temp
 # eval "$(grep export ssh_github.sh)"
 echo "from index 1 -- $IDFIleNAME"
 echo "from index 2 -- ${IDFIleNAME}"
@@ -41,29 +46,30 @@ echo "from index 2 -- ${IDFIleNAME}"
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"
 select REPO in "Yes" "No"; do
     case $REPO in
-        Yes ) gitRepo; break;;
+        # git_Repo is from ./repo.sh
+        Yes ) git_Repo; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
 
 
-echo "Folder and Dirname $FOLDERNAME $DIRNAME"
+echo "The repo link is $REPO_LINK"
 
 echo "Do you wish to install nginx? To use this feture you must have a build file"
 select NGINX in "Yes" "No"; do
     case $NGINX in
-        Yes ) nginxInstall; break;;
+        Yes ) nginx_Install; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
 
 
-echo "Would you like me to set up your site with nginx?"
+echo "Would you like me to launch your application with nginx?"
 select NGINXSETUP in "Yes" "No"; do
     case $NGINXSETUP in
-        Yes ) siteSetup; break;;
+        Yes ) nginx_goLive; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
