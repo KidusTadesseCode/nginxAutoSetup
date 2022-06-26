@@ -1,4 +1,6 @@
 #!/bin/sh
+echo "Hellow $IDFIleNAME"
+
 echo 'What would you like this ssl keys to be called? You can use your username or anything.'
 read USERNAME
 
@@ -6,7 +8,7 @@ echo "Passphrase for the key? This is optional and to skip press enter
 If you provide passphrase, please make sure you remember it."
 read PASSPHRASE
 
-export IDFIleNAME=$USERNAME'_id_rsa'
+export $IDFIleNAME=$USERNAME'_id_rsa'
 ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
 echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
