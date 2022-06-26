@@ -22,10 +22,10 @@ function ssh_git(){
     ssh-add ~/.ssh/$IDFIleNAME
     # echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
+    display_public_key "$IDFIleNAME"
+
     sudo chmod 400 ~/.ssh/$IDFIleNAME
     # chmod go-w ~/.ssh/config
-
-    display_public_key"$IDFIleNAME"
 
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/$IDFIleNAME
