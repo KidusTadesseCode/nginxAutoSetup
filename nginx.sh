@@ -1,7 +1,8 @@
 function nginx_Install(){
     sudo yum install nginx
+    sudo amazon-linux-extras install nginx1
     sudo nginx -v
-    exit
+    return
 }
 
 function nginx_goLive(){
