@@ -1,6 +1,6 @@
 #!/bin/sh
 # chmod +x index.sh
-# chmod +x git.sh
+chmod +x git.sh
 # chmod +x node.sh
 # chmod +x ssh_github.sh
 
