@@ -1,4 +1,5 @@
 #!/bin/sh
+bash
 echo "Hellow $IDFIleNAME"
 
 echo 'What would you like this ssl keys to be called? You can use your username or anything.'
