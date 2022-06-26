@@ -6,7 +6,7 @@ function display_public_key(){
     echo -e '\n'
     echo "press enter key to continue "
     read ANYKEY
-    exit
+    return
 }
 function ssh_git(){
     echo 'What would you like this ssl keys to be called? You can use your username or anything.'
