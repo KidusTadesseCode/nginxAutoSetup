@@ -22,7 +22,7 @@ select NODEJS in "Yes" "No"; do
     esac
 done
 pwd
-source "ssh_github.sh"
+source "./ssh_github.sh"
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
