@@ -1,8 +1,8 @@
 #!/bin/sh
-chmod +x index.sh
-chmod +x git.sh
-chmod +x node.sh
-chmod +x ssh_github.sh
+# chmod +x index.sh
+# chmod +x git.sh
+# chmod +x node.sh
+# chmod +x ssh_github.sh
 
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
@@ -27,8 +27,8 @@ echo "Would you like me to help you setup ssh keys so you can connect to github?
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
         Yes )
-        export IDFIleNAME 
-        sh ssh_github.sh; break;;
+        source "./ssh_github.sh"
+        IDFIleNAME=git(); break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
