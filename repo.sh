@@ -37,9 +37,9 @@ read ANYKEY
 # cd ~/navigation
 # npm i
 
-# FOLDERNAME=${PWD##*/}
-# DIRNAME==$(pwd)
-
+FOLDERNAME=${PWD##*/}
+DIRNAME==$(pwd)
+return $FOLDERNAME $DIRNAME
 # export FOLDERNAME
 # export DIRNAME
 }

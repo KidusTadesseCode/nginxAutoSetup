@@ -5,6 +5,8 @@ chmod +x git.sh
 chmod +x ssh_github.sh
 source ./ssh_github.sh
 source ./repo.sh
+source ./nginx.sh
+
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
@@ -46,11 +48,22 @@ select REPO in "Yes" "No"; do
 done
 
 
+echo "Folder and Dirname $FOLDERNAME $DIRNAME"
 
 echo "Do you wish to install nginx? To use this feture you must have a build file"
 select NGINX in "Yes" "No"; do
     case $NGINX in
-        Yes ) sh nginx.sh; break;;
+        Yes ) nginxInstall; break;;
+        No ) break;;
+        *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
+    esac
+done
+
+
+echo "Would you like me to set up your site with nginx?"
+select NGINXSETUP in "Yes" "No"; do
+    case $NGINXSETUP in
+        Yes ) siteSetup; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
