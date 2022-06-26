@@ -7,7 +7,7 @@ function ssh_git(){
     If you provide passphrase, please make sure you remember it."
     read PASSPHRASE
 
-    export IDFIleNAME=$USERNAME'_id_rsa'
+    IDFIleNAME=$USERNAME'_id_rsa'
     ssh-keygen -f ~/.ssh/$IDFIleNAME -t rsa -N "$PASSPHRASE";
     echo -e '#'$USERNAME'\nHost '$USERNAME'\n\tHostName github.com\n\tIdentityFile ~/.ssh/'$IDFIleNAME>> ~/.ssh/config
 
