@@ -3,7 +3,7 @@
 chmod +x git.sh
 # chmod +x node.sh
 chmod +x ssh_github.sh
-source "ssh_github.sh"
+source ssh_github.sh
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
