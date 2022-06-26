@@ -3,7 +3,7 @@
 chmod +x git.sh
 # chmod +x node.sh
 chmod +x ssh_github.sh
-
+source "ssh_github.sh"
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
@@ -22,7 +22,7 @@ select NODEJS in "Yes" "No"; do
     esac
 done
 
-source "ssh_github.sh"
+
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
