@@ -21,8 +21,8 @@ select NODEJS in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
-
-source "./ssh_github.sh"
+pwd
+source "ssh_github.sh"
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
