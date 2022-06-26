@@ -1,4 +1,9 @@
 #!/bin/sh
+chmod x index.sh
+chmod x git.sh
+chmod x node.sh
+chmod x ssh_github.sh
+
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
@@ -11,9 +16,7 @@ done
 echo "Do you wish to install nodejs?"
 select NODEJS in "Yes" "No"; do
     case $NODEJS in
-        Yes )
-        export IDFIleNAME
-        sh node.sh; break;;
+        Yes ) sh node.sh; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
@@ -23,7 +26,9 @@ done
 echo "Would you like me to help you setup ssh keys so you can connect to github?"
 select SSLGITHUB in "Yes" "No"; do
     case $SSLGITHUB in
-        Yes ) sh ssh_github.sh; break;;
+        Yes )
+        export IDFIleNAME 
+        sh ssh_github.sh; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
