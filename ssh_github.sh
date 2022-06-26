@@ -19,7 +19,7 @@ function ssh_git(){
     echo "Copy your public key and past it in your github account in your setting where it says SSH and GPG keys"
     echo -e '\n'
 
-    cat ~/.ssh/$IDFIleNAME'.pub'
+    sudo cat ~/.ssh/$IDFIleNAME'.pub'
     echo -e '\n'
     echo "press enter key to continue "
     read ANYKEY
