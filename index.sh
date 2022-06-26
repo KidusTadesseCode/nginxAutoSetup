@@ -8,7 +8,7 @@ source ./repo.sh
 source ./nginx.sh
 
 #temp Delete this line and the file
-sh test.sh
+# sh test.sh
 
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
@@ -40,8 +40,8 @@ done
 
 # Temp
 # eval "$(grep export ssh_github.sh)"
-echo "from index 1 -- $IDFIleNAME"
-echo "from index 2 -- ${IDFIleNAME}"
+# echo "from index 1 -- $IDFIleNAME"
+# echo "from index 2 -- ${IDFIleNAME}"
 
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"
 select REPO in "Yes" "No"; do
