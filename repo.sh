@@ -1,28 +1,26 @@
 #!/bin/sh
-# echo "Whats the repo ssl link?"
-# read REPOLINK
-
-# while [ -z $REPOLINK ]
-# do
-#    echo "Whats the repo ssl link?"
-#    read REPOLINK
-# done
+function gitRepo(){
+while [ -z $REPOLINK ]
+do
+    echo "Whats the repo ssl link?"
+    read REPOLINK
+done
 
 
 # eval "$(ssh-agent -s)"
 # cd 
 # git clone REPOLINK
 
-eval `grep "^export " ../ssh_github.sh`
+# eval `grep "^export " ../ssh_github.sh`
 
 mkdir ~/repo
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/$IDFIleNAME
 echo "from repo -- ${IDFIleNAME}"
-
+git clone $REPOLINK ~/repo
 
 # ssh-add ~/.ssh/try_id_rsa
-git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
+# git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
 
 eval "$(pwd)"
 
@@ -44,3 +42,4 @@ read ANYKEY
 
 # export FOLDERNAME
 # export DIRNAME
+}

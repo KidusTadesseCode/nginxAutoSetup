@@ -4,6 +4,7 @@ chmod +x git.sh
 # chmod +x node.sh
 chmod +x ssh_github.sh
 source ./ssh_github.sh
+source ./repo.sh
 echo "Do you wish to install git?"
 select GIT in "Yes" "No"; do
     case $GIT in
@@ -38,7 +39,7 @@ echo "from index 2 -- ${IDFIleNAME}"
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"
 select REPO in "Yes" "No"; do
     case $REPO in
-        Yes ) sh repo.sh; break;;
+        Yes ) gitRepo; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
