@@ -11,7 +11,9 @@ done
 echo "Do you wish to install nodejs?"
 select NODEJS in "Yes" "No"; do
     case $NODEJS in
-        Yes ) sh node.sh; break;;
+        Yes )
+        export IDFIleNAME
+        sh node.sh; break;;
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
