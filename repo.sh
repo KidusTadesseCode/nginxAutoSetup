@@ -10,6 +10,7 @@ done
 
 #ssh-add ~/.ssh/try_id_rsa
 #git clone $REPOLINK ./ 
+eval "$(ssh-agent -s)"
 git clone $REPOLINK ~/repo
 REPOEDFileName=$(parcer "$REPOLINK")
 echo $REPOEDFileName
