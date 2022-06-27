@@ -55,7 +55,7 @@ done
 
 
 # REPO_LINK form repo.sh
-# REPO_LINK=$(git_Repo)
+REPO_LINK=$(git_Repo)
 echo "The repo link is $REPO_LINK"
 
 'echo "Do you wish to install nginx? To use this feture you must have a build file"

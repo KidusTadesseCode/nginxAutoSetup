@@ -1,4 +1,6 @@
 #!/bin/sh
+source ./urlPacer.sh
+
 function git_Repo(){
 while [ -z $REPOLINK ]
 do
@@ -10,7 +12,8 @@ done
 ssh-add ~/.ssh/try_id_rsa
 #git clone $REPOLINK ./ 
 git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
-echo "git@github.com:KidusTadesseCode/navigation.git"
+OP=parcer "git@github.com:KidusTadesseCode/navigation.git"
+echo $OP
 
 # eval "$(ssh-agent -s)"
 # cd 
