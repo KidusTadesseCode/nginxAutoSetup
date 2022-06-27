@@ -12,7 +12,7 @@ done
 ssh-add ~/.ssh/try_id_rsa
 #git clone $REPOLINK ./ 
 git clone git@github.com:KidusTadesseCode/navigation.git ~/repo
-OP=parcer "git@github.com:KidusTadesseCode/navigation.git"
+OP=$(parcer "git@github.com:KidusTadesseCode/navigation.git")
 echo $OP
 
 # eval "$(ssh-agent -s)"
