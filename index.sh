@@ -38,10 +38,6 @@ select SSLGITHUB in "Yes" "No"; do
     esac
 done
 
-# Temp
-# eval "$(grep export ssh_github.sh)"
-# echo "from index 1 -- $IDFIleNAME"
-# echo "from index 2 -- ${IDFIleNAME}"
 
 echo "Do you wish to clone a repo? Inorder to use this feuter your ec2 must be connected"
 select REPO in "Yes" "No"; do
@@ -58,7 +54,7 @@ done
 REPO_LINK=$(git_Repo)
 echo "The repo link is $REPO_LINK"
 
-'echo "Do you wish to install nginx? To use this feture you must have a build file"
+echo "Do you wish to install nginx? To use this feture you must have a build file"
 select NGINX in "Yes" "No"; do
     case $NGINX in
         # nginx_Install is from ./nginx.sh
@@ -66,10 +62,10 @@ select NGINX in "Yes" "No"; do
         No ) break;;
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
-done'
+done
 
 
-:'
+
 echo "Would you like me to launch your application with nginx?"
 select NGINXSETUP in "Yes" "No"; do
     case $NGINXSETUP in
@@ -79,4 +75,3 @@ select NGINXSETUP in "Yes" "No"; do
         *) echo "Invalid entry. Please type 1 for yes or type 2 for no."
     esac
 done
-'
